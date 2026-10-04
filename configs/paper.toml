@@ -1,0 +1,42 @@
+[training]
+model = "Qwen/Qwen3-8B"
+train_examples = 40000
+validation_examples = 2000
+epochs = 2
+learning_rate = 0.00001
+weight_decay = 0.01
+warmup_ratio = 0.05
+lr_scheduler_type = "cosine"
+per_device_batch_size = 1
+gradient_accumulation_steps = 4
+world_size = 8
+effective_batch_size = 32
+bf16 = true
+gradient_checkpointing = true
+attention_implementation = "flash_attention_2"
+max_grad_norm = 1.0
+max_sequence_length = 32768
+deepspeed = "configs/zero3.json"
+checkpoint_metric = "exact_match"
+
+[evaluation]
+max_context_length = 32768
+calls_per_instance = 1
+judge_temperature = 0.0
+judge_model = "gpt-5.6-sol"
+
+[rq2]
+models = ["Claude-Opus-4.8", "DeepSeek-V4.1-Flash", "DeepSeek-V4-Pro", "Kimi-K3", "GLM-5.3"]
+distance_upper_bounds = [4, 8, 16]
+obligation_counts = [1, 2, 3, 4, 5]
+
+[rq3]
+backbones = ["Qwen/Qwen3-4B", "Qwen/Qwen3-8B", "Qwen/Qwen3-14B", "meta-llama/Llama-3.1-8B-Instruct"]
+training_sizes = [5000, 10000, 20000, 40000]
+direct_synthesis_examples = 40000
+
+[rq4]
+agent_model = "Qwen3.8-27B"
+task_count = 186
+guidance_limit = 1
+guards = ["Qwen3-8B", "GLM-5.3", "Kimi-K3", "DeepSeek-V4.1-Flash", "Claude-Opus-4.8", "ObligationGuard"]

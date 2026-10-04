@@ -1,0 +1,71 @@
+models_config = "${REPOSITORY}/configs/models.json"
+
+[pipeline]
+stages = ["rq1", "rq2", "rq3", "rq4"]
+
+[paths]
+train = "${REPOSITORY}/data/train.jsonl"
+validation = "${REPOSITORY}/data/validation.jsonl"
+benchmark = "${REPOSITORY}/data/obligationbench.jsonl"
+without_templates = "${REPOSITORY}/data/without_templates/train_42000.jsonl"
+direct_train = "${REPOSITORY}/data/without_templates/train.jsonl"
+direct_validation = "${REPOSITORY}/data/without_templates/validation.jsonl"
+checkpoints = "${OBLIGATIONGUARD_RUN_ROOT}/checkpoints"
+results = "${OBLIGATIONGUARD_RUN_ROOT}/results"
+
+[training_runtime]
+adam_beta1 = 0.9
+adam_beta2 = 0.999
+adam_epsilon = 0.00000001
+max_output_tokens = 4096
+model_revision = "b968826d9c46dd6066d109eabc6255188de91218"
+
+[training_runtime.chat_template_kwargs]
+enable_thinking = true
+
+[models.judge]
+backend = "responses"
+model = "gpt-5.6-sol"
+api_key_env = "OPENAI_API_KEY"
+max_output_tokens = 4096
+max_context_length = 32768
+
+[models.judge.parameters]
+temperature = 0.0
+
+[evaluation_models.Qwen3-8B]
+backend = "local"
+model = "Qwen/Qwen3-8B"
+max_output_tokens = 4096
+max_context_length = 32768
+
+[evaluation_models.Qwen3-8B.chat_template_kwargs]
+enable_thinking = true
+
+[evaluation_models.ObligationGuard]
+backend = "local"
+model = "${OBLIGATIONGUARD_RUN_ROOT}/checkpoints/best"
+max_output_tokens = 4096
+max_context_length = 32768
+
+[evaluation_models.ObligationGuard.chat_template_kwargs]
+enable_thinking = true
+
+[susvibes]
+tasks = "${REPOSITORY}/data/susvibes.jsonl"
+checkout = "${OBLIGATIONGUARD_SUSVIBES_CHECKOUT}"
+workers = 5
+run_id = "obligationguard"
+container_timeout = "12h"
+command_timeout = 120
+snapshot_mode = "checkpoint"
+
+[susvibes.agent]
+model_class = "litellm_textbased"
+
+[susvibes.agent.model_kwargs]
+temperature = 0.0
+max_tokens = 4096
+
+[susvibes.agent.model_kwargs.extra_body.chat_template_kwargs]
+enable_thinking = true

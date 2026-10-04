@@ -1,0 +1,29 @@
+{
+  "models": {
+    "judge": {"backend":"responses","model":"gpt-5.6-sol","api_key_env":"OPENAI_API_KEY","max_output_tokens":4096,"max_context_length":32768,"parameters":{"temperature":0.0,"reasoning":{"effort":"none"}}},
+    "generator": {"backend":"responses","model":"gpt-5.6-sol","api_key_env":"OPENAI_API_KEY","max_output_tokens":4096,"max_context_length":32768,"parameters":{"reasoning":{"effort":"high"}}}
+  },
+  "evaluation_models": {
+    "Claude-Opus-4.8": {"backend":"anthropic","model":"claude-opus-4-8","base_url":"https://api.anthropic.com/v1","api_key_env":"ANTHROPIC_API_KEY","max_output_tokens":4096,"max_context_length":32768,"parameters":{"thinking":{"type":"adaptive"}}},
+    "DeepSeek-V4.1-Flash": {"backend":"chat","model":"deepseek-flash","base_url":"https://api.deepseek.com","api_key_env":"DEEPSEEK_API_KEY","tokenizer":"deepseek-ai/DeepSeek-V4.1-Flash","tokenizer_revision":"2cba9e42aa026125f3ed06c6d98c1db82f7ca027","max_output_tokens":4096,"max_context_length":32768,"parameters":{"thinking":{"type":"enabled"},"reasoning_effort":"high"}},
+    "DeepSeek-V4-Pro": {"backend":"chat","model":"deepseek-v4-pro","base_url":"https://api.deepseek.com","api_key_env":"DEEPSEEK_API_KEY","tokenizer":"deepseek-ai/DeepSeek-V4-Pro","tokenizer_revision":"b5968e9190ef611bbf34a7229255be88a0e937c1","max_output_tokens":4096,"max_context_length":32768,"parameters":{"thinking":{"type":"enabled"},"reasoning_effort":"high"}},
+    "Kimi-K3": {"backend":"chat","model":"kimi-k3","base_url":"https://api.moonshot.ai/v1","api_key_env":"MOONSHOT_API_KEY","token_count_backend":"moonshot","max_output_tokens":4096,"max_context_length":32768,"parameters":{"reasoning_effort":"max"}},
+    "GLM-5.3": {"backend":"chat","model":"glm-5.3","base_url":"https://api.z.ai/api/paas/v4","api_key_env":"ZAI_API_KEY","tokenizer":"zai-org/GLM-5.3","tokenizer_revision":"aca966e4e02791568aa6a4ced368624b3d897f42","tokenizer_backend":"fast","max_output_tokens":4096,"max_context_length":32768,"parameters":{"temperature":0.0,"thinking":{"type":"enabled"},"reasoning_effort":"max"}},
+    "Qwen3.8-Max": {"backend":"chat","model":"qwen3.8-max","base_url":"${QWEN_API_BASE_URL}","api_key_env":"DASHSCOPE_API_KEY","tokenizer":"Qwen/Qwen3.8-2.4T-A95B","tokenizer_revision":"207bd685a7e3696cfaff12ded7c6a7ea0f88c996","max_output_tokens":4096,"max_context_length":32768,"parameters":{"temperature":0.0,"enable_thinking":true}},
+    "GPT-5.6-Sol": {"backend":"responses","model":"gpt-5.6-sol","api_key_env":"OPENAI_API_KEY","max_output_tokens":4096,"max_context_length":32768,"parameters":{"temperature":0.0,"reasoning":{"effort":"none"}}},
+    "Qwen3.8-27B": {"backend":"managed_chat","model":"Qwen/Qwen3.8-27B","revision":"1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0","tokenizer":"Qwen/Qwen3.8-27B","tokenizer_revision":"1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0","max_output_tokens":4096,"max_context_length":32768,"chat_template_kwargs":{"enable_thinking":true},"api_chat_template_kwargs":{"enable_thinking":true},"parameters":{"temperature":0.0},"server":{"python":"${OBLIGATIONGUARD_INFERENCE_PYTHON}","port":8100,"tensor_parallel_size":1,"gpu_memory_utilization":0.7,"logs":"${OBLIGATIONGUARD_RUN_ROOT}/servers"}},
+    "Qwen3-8B": {"backend":"local","model":"Qwen/Qwen3-8B","revision":"b968826d9c46dd6066d109eabc6255188de91218","max_output_tokens":4096,"max_context_length":32768,"chat_template_kwargs":{"enable_thinking":true}},
+    "GPT-OSS-20B": {"backend":"managed_chat","model":"openai/gpt-oss-20b","revision":"6cee5e81ee83917806bbde320786a8fb61efebee","tokenizer":"openai/gpt-oss-20b","tokenizer_revision":"6cee5e81ee83917806bbde320786a8fb61efebee","max_output_tokens":4096,"max_context_length":32768,"parameters":{"temperature":0.0},"server":{"python":"${OBLIGATIONGUARD_INFERENCE_PYTHON}","port":8102,"tensor_parallel_size":1,"gpu_memory_utilization":0.7,"logs":"${OBLIGATIONGUARD_RUN_ROOT}/servers"}},
+    "Llama-3.1-8B-Instruct": {"backend":"local","model":"meta-llama/Llama-3.1-8B-Instruct","revision":"0e9e39f249a16976918f6564b8830bc894c89659","max_output_tokens":4096,"max_context_length":32768},
+    "Llama-Guard-3-8B": {"backend":"local","model":"meta-llama/Llama-Guard-3-8B","revision":"7327bd9f6efbbe6101dc6cc4736302b3cbb6e425","max_output_tokens":4096,"max_context_length":32768},
+    "Qwen3Guard-Gen-8B": {"backend":"local","model":"Qwen/Qwen3Guard-Gen-8B","revision":"4505cb1a6f1864f21f8b27f7daf1b9a1aab6edbb","max_output_tokens":4096,"max_context_length":32768},
+    "AgentDoG1.5-Qwen3.5-4B": {"backend":"managed_chat","model":"AI45Research/AgentDoG1.5-Qwen3.5-4B","revision":"3193b58d0c8924f5b5a79eb99cd31918e327024c","tokenizer":"AI45Research/AgentDoG1.5-Qwen3.5-4B","tokenizer_revision":"3193b58d0c8924f5b5a79eb99cd31918e327024c","max_output_tokens":4096,"max_context_length":32768,"parameters":{"temperature":0.0},"server":{"python":"${OBLIGATIONGUARD_INFERENCE_PYTHON}","port":8101,"tensor_parallel_size":1,"gpu_memory_utilization":0.7,"logs":"${OBLIGATIONGUARD_RUN_ROOT}/servers"}},
+    "ObligationGuard": {"backend":"local","model":"${OBLIGATIONGUARD_RUN_ROOT}/checkpoints/best","max_output_tokens":4096,"max_context_length":32768,"chat_template_kwargs":{"enable_thinking":true}}
+  },
+  "backbone_revisions": {
+    "Qwen/Qwen3-4B":"1cfa9a7208912126459214e8b04321603b3df60c",
+    "Qwen/Qwen3-8B":"b968826d9c46dd6066d109eabc6255188de91218",
+    "Qwen/Qwen3-14B":"40c069824f4251a91eefaf281ebe4c544efd3e18",
+    "meta-llama/Llama-3.1-8B-Instruct":"0e9e39f249a16976918f6564b8830bc894c89659"
+  }
+}

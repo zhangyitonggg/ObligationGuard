@@ -1,0 +1,4 @@
+* -text
+data/train.jsonl filter=lfs diff=lfs merge=lfs -text
+data/without_templates/train.jsonl filter=lfs diff=lfs merge=lfs -text
+data/without_templates/train_42000.jsonl filter=lfs diff=lfs merge=lfs -text

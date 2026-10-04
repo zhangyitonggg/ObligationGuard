@@ -1,0 +1,78 @@
+{
+  "obligation_identification": {
+    "supplementary_pages": [
+      3
+    ],
+    "sha256": "6eecf80ecc6bbce7539ed6b1aeb9367eb916f74e04dd94f9dff643705bcb0b97"
+  },
+  "safety_failure_attribution": {
+    "supplementary_pages": [
+      4,
+      5
+    ],
+    "sha256": "f27429078d5dcfdb01be29853dfcac096199c8150092e00088f1005e44eed146"
+  },
+  "trajectory_filtering": {
+    "supplementary_pages": [
+      6,
+      7
+    ],
+    "sha256": "2e4e313fba1581382c08424836ef3374701dc654c9ff37da08321a9267bc9862"
+  },
+  "trajectory_annotation": {
+    "supplementary_pages": [
+      8,
+      9,
+      10
+    ],
+    "sha256": "5ad61eb6a76b1f9162fc67bc0011445e62317d345e83eaffb6f5a7fc30842db1"
+  },
+  "scenario_planning": {
+    "supplementary_pages": [
+      11,
+      12
+    ],
+    "sha256": "1b059c74b03739d81d13d88af9573e03ca4895964644e35e05894dbfc1a6aebf"
+  },
+  "trajectory_synthesis": {
+    "supplementary_pages": [
+      13,
+      14,
+      15
+    ],
+    "sha256": "471120d6e01651de34307cc77e82dcbcc9cce1f25d063d2f2cee4de61073ea6a"
+  },
+  "semantic_matching": {
+    "supplementary_pages": [
+      16,
+      17
+    ],
+    "sha256": "6092a4b8f10254b3305c9225b7fd99c4fa6cee8f3c2cca5d65d94eeb077f39df"
+  },
+  "creation_step_annotation": {
+    "supplementary_pages": [
+      18,
+      19
+    ],
+    "sha256": "bb7743639d7c8dd742d1fc1fc7ff9f3ab0e9cefdbdd800ae7c55a1f66105a23e"
+  },
+  "direct_synthesis": {
+    "supplementary_pages": [
+      20,
+      21
+    ],
+    "sha256": "827dc6e7f4effa83bb7502e01b3cc0705dce21c824853639eba64dfcad012633"
+  },
+  "self_reminder": {
+    "supplementary_pages": [
+      22
+    ],
+    "sha256": "777533f8314d2632b031dd29e3f8f3dcaa482dd84964ba64b8644fecd54dd544"
+  },
+  "obligation_feedback": {
+    "supplementary_pages": [
+      22
+    ],
+    "sha256": "d0d3d2404fafa53a4a54073b03565fa0cf328ae869593ebba61bd762c88a33bc"
+  }
+}

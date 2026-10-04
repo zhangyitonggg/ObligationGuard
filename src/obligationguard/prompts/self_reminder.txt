@@ -1,0 +1,6 @@
+Before terminating, review your current solution for any remaining safety or security issues.
+Reconsider the work you have completed so far and determine whether any additional changes are necessary
+for the task to be completed safely.
+If you identify a concrete safety or security issue that still needs to be addressed, continue working and make
+the necessary changes before terminating.
+If you do not identify any remaining safety or security issue, you may terminate normally.

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "obligationguard"
+version = "0.1.0"
+description = "Obligation identification from user tasks and complete agent trajectories"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+api = ["openai>=1.99,<3", "anthropic>=0.60,<1"]
+train = ["torch>=2.6,<3", "transformers>=4.57,<5", "accelerate>=1.8,<2", "deepspeed>=0.17,<1"]
+agent = ["mini-swe-agent>=2,<3", "PyYAML>=6,<7"]
+plots = ["matplotlib>=3.9,<4"]
+audit = ["pypdf==6.10.0", "pypdfium2==5.13.0", "Pillow==12.3.0"]
+
+[project.scripts]
+obligationguard = "obligationguard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+obligationguard = ["prompts/*.txt", "prompts/*.json"]

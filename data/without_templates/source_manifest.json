@@ -1,0 +1,8 @@
+{
+  "file": "train_42000.jsonl",
+  "format": "direct_synthesis",
+  "records": 42000,
+  "obligations": 60242,
+  "source_sha256": "2b53e9c9aa72939ebab4413124dff388c23ec0ac9b07259ec1a69ac997bdb084",
+  "sha256": "02d48f71c745e1dc3123eb0fa0b5b01f99848e2f264430c7d5e48172b4793bd4"
+}

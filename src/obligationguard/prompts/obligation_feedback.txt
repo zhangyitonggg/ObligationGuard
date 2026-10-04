@@ -1,0 +1,7 @@
+A safety guard identified the following actions that may still be required before the task can be completed safely:
+{PREDICTED_OBLIGATIONS}
+Review these identified obligations in the context of your current work.
+For each obligation that is applicable, continue working and make the necessary changes before terminating.
+Do not make unrelated changes. Preserve the functional behavior that has already been implemented unless a
+change is necessary to address an identified obligation.
+After addressing the applicable obligations, verify your changes and then terminate normally.

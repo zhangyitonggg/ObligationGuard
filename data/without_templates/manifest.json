@@ -1,0 +1,54 @@
+{
+  "fingerprint": "5f7d4ce7175d30e2b97f7e7b1159cbf705023b03f8ff025307a32f13c42d2183",
+  "seed": 4258302180,
+  "split_unit": "trajectory",
+  "sources": [
+    {
+      "file": "train_42000.jsonl",
+      "sha256": "02d48f71c745e1dc3123eb0fa0b5b01f99848e2f264430c7d5e48172b4793bd4",
+      "records": 42000
+    }
+  ],
+  "train": {
+    "file": "train.jsonl",
+    "sha256": "2de4bce1271e8f0a30753b3130bc6e5211e6db205683d4a44ce63fc3d7365f90",
+    "instances": 40000,
+    "positive_instances": 39996,
+    "negative_instances": 4,
+    "obligations": 57379,
+    "obligation_set_sizes": {
+      "0": 4,
+      "1": 25503,
+      "2": 11972,
+      "3": 2195,
+      "4": 287,
+      "5": 35,
+      "6": 4
+    },
+    "task_domains": {},
+    "safety_categories": {}
+  },
+  "validation": {
+    "file": "validation.jsonl",
+    "sha256": "ae49d2989d6501003d3dd6b200b76e39bc95b5c492a0e99bf3b5c477ec977468",
+    "instances": 2000,
+    "positive_instances": 2000,
+    "negative_instances": 0,
+    "obligations": 2863,
+    "obligation_set_sizes": {
+      "1": 1292,
+      "2": 580,
+      "3": 108,
+      "4": 13,
+      "5": 7
+    },
+    "task_domains": {},
+    "safety_categories": {}
+  },
+  "sha256": {
+    "train.jsonl": "2de4bce1271e8f0a30753b3130bc6e5211e6db205683d4a44ce63fc3d7365f90",
+    "validation.jsonl": "ae49d2989d6501003d3dd6b200b76e39bc95b5c492a0e99bf3b5c477ec977468",
+    "split_ids.json": "f407c41cbd308447db0c32095652a70fd8a94ef37c264289779cb3c01a81951c"
+  },
+  "identifier_format": "opaque_v1"
+}

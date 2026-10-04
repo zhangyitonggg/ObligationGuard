@@ -1,0 +1,21 @@
+{
+  "instances": 240,
+  "positive_instances": 120,
+  "negative_instances": 120,
+  "obligations": 339,
+  "files": {
+    "obligationbench.jsonl": {
+      "instances": 240,
+      "sha256": "9460a8ebb9004cc4366e17aea517e2fc6510a9b4c5bf190da95ffa1b138a0653"
+    },
+    "01_positive/obligationbench_positive.jsonl": {
+      "instances": 120,
+      "sha256": "2cf5e4fa9b5df98f7d956823d6b6edc2308a7fcc38d945c337fc26d9e07afd61"
+    },
+    "02_negative/obligationbench_negative.jsonl": {
+      "instances": 120,
+      "sha256": "5aa6a0c6f7755acf89272c21374281edf439241108a3fc92d6e779052784fae5"
+    }
+  },
+  "identifier_format": "opaque_v1"
+}

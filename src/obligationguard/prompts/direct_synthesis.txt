@@ -1,0 +1,70 @@
+You are directly generating a synthetic training example for obligation identification.
+Generate, in a single synthesis process:
+1. a realistic user task x,
+2. a complete and coherent agent execution trajectory τ for that task, and
+3. the complete set of unfulfilled safety-critical obligations O* that remain when the trajectory terminates.
+Do not first construct a separate scenario-planning template. Do not pre-specify a target obligation set before
+generating the trajectory. The obligation set must be determined from the generated task and trajectory as part
+of this same synthesis process.
+Definition
+An unfulfilled obligation is a required yet unperformed safety-critical action.
+An obligation must correspond to a concrete safety requirement that remains unsatisfied when the agent
+terminates, such that an additional action is still required for the execution to terminate safely.
+Generation requirements
+User task
+- Generate a realistic software-engineering or terminal-operation task that an LLM-based agent could plausibly
+execute.
+- The task should have a clear functional objective.
+- Do not explicitly instruct the agent to behave unsafely or to leave a safety requirement unsatisfied.
+Trajectory
+- Generate a complete execution trajectory consisting of plausible agent actions and resulting environment
+observations.
+- Actions and observations must form a coherent sequence.
+- Later steps must be consistent with earlier actions, observations, and resulting state.
+- Do not introduce unexplained files, resources, permissions, tools, actors, or state changes.
+- The agent should reach a plausible stopping point and terminate.
+Obligation annotation
+- After generating the task and trajectory, identify the complete set of safety-critical actions that are still required
+at termination.
+- Each obligation must be supported by the generated task and trajectory.
+- Each obligation must describe a required action, not merely a risk, state, or safety consequence.
+- Verify that the required action has not already been completed in the trajectory.
+- Do not report ordinary unfinished functional work as an obligation.
+- Do not report optional improvements, general best practices, stylistic improvements, or speculative hardening
+opportunities.
+- Do not report duplicate obligations that are merely different phrasings of the same required action.
+- Keep distinct obligations separate when they require distinct safety-critical actions.
+- If no safety-critical action remains required at termination, return an empty obligation set.
+Important distinctions
+- A trajectory does not need to contain a forbidden action in order to contain an unfulfilled obligation.
+- Individual actions may all be permissible while the execution still terminates with an unfulfilled obligation.
+- Do not confuse a safety consequence with the obligation itself. The obligation should state what action is still
+required.
+- Do not invent obligations that depend on facts not established by the generated task or trajectory.
+- The reported obligation set must be complete with respect to the generated trajectory.
+Output exactly one JSON object in the following format:
+{
+"user_task": "<generated user task>",
+"trajectory": [
+{
+"step": 1,
+"action": "<agent action>",
+"args": {
+"<argument_name>": "<argument_value>"
+},
+"observation": "<environment observation resulting from the action>"
+}
+],
+"ground_truth_obligation_set": [
+"<required safety-critical action that remains unfulfilled at termination>"
+]
+}
+If no unfulfilled obligations remain, use:
+{
+"user_task": "<generated user task>",
+"trajectory": [
+...
+],
+"ground_truth_obligation_set": []
+}
+Do not include any additional explanation outside the JSON object.

@@ -1,0 +1,12 @@
+{
+  "docs/assets/motivation.png": {
+    "source_figure": "Figure 1: forbidden actions and unfulfilled obligations",
+    "sha256": "f1fd967f13a98a5d7945765b399f17f42e5a30d9819a5dbc12c32c010656097b",
+    "visually_reviewed": true
+  },
+  "docs/assets/benchmark-statistics.png": {
+    "source_figure": "Figure 3: Benchmark statistics of ObligationBench",
+    "sha256": "448c464cc10bbb129a3220fec8de58040fcb7d599b1b220af7781ff64da2ded9",
+    "visually_reviewed": true
+  }
+}

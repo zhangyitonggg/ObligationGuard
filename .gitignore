@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+*.local.toml
+*.local.json
+data/susvibes.jsonl
+outputs/
+checkpoints/
+.pytest_cache/
+.coverage
+dist/
+build/

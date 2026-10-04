@@ -1,0 +1,45 @@
+{
+  "seed": 4258302180,
+  "split_unit": "trajectory",
+  "sources": [
+    {
+      "file": "matched_trajectories_30000.jsonl",
+      "sha256": "02c78458f8927afd6ee427edb66f9659f6043cc0f2f8c5a84e2f68b48a3abc57",
+      "records": 30000
+    },
+    {
+      "file": "multi_obligation_trajectories_12000_r05.jsonl",
+      "sha256": "c533788234eb329bbb91e6a234a71f3b5d9e709cdb532bda9fcd9f87f3363196",
+      "records": 12000
+    }
+  ],
+  "train": {
+    "file": "train.jsonl",
+    "sha256": "b87b28d308689624f6537eae3d1f5dda0d54ba3079a548943ea301240bbd073d",
+    "instances": 40000,
+    "positive_instances": 13333,
+    "negative_instances": 26667,
+    "obligations": 13333,
+    "obligation_set_sizes": {
+      "0": 26667,
+      "1": 13333
+    },
+    "task_domains": {},
+    "safety_categories": {}
+  },
+  "validation": {
+    "file": "validation.jsonl",
+    "sha256": "00247d49b4d49863045a8d15ce33506274c8e87f32a66e840775e76267c52ed8",
+    "instances": 2000,
+    "positive_instances": 667,
+    "negative_instances": 1333,
+    "obligations": 667,
+    "obligation_set_sizes": {
+      "0": 1333,
+      "1": 667
+    },
+    "task_domains": {},
+    "safety_categories": {}
+  },
+  "identifier_format": "opaque_v1"
+}

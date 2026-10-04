@@ -1,0 +1,12 @@
+{
+  "susvibes": {
+    "repository": "https://github.com/LeiLiLab/susvibes",
+    "revision": "520f16f9b3f39b06c6013bc0eb57a38280b4deee",
+    "dataset": "datasets/default/susvibes_dataset.jsonl",
+    "paper": "https://arxiv.org/abs/2512.03262v4"
+  },
+  "mini_swe_agent": {
+    "repository": "https://github.com/SWE-agent/mini-swe-agent",
+    "revision": "04d809ceab9df28f9adaed044884180159172930"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Claude-Opus-4.8": ["https://platform.claude.com/docs/en/models/opus-4-8/overview"],
+  "DeepSeek-V4.1-Flash": ["https://api-docs.deepseek.com/updates/","https://api-docs.deepseek.com/quick_start/pricing-details-cny/","https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"],
+  "DeepSeek-V4-Pro": ["https://api-docs.deepseek.com/quick_start/pricing-details-cny/","https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"],
+  "Kimi-K3": ["https://platform.kimi.ai/docs/overview","https://platform.kimi.ai/docs/api/models-overview","https://platform.kimi.ai/docs/api/estimate","https://huggingface.co/moonshotai/Kimi-K3"],
+  "GLM-5.3": ["https://docs.z.ai/guides/llm/glm-5.3","https://huggingface.co/zai-org/GLM-5.3"],
+  "Qwen3.8-Max": ["https://help.aliyun.com/en/model-studio/what-is-model-studio","https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"],
+  "GPT-5.6-Sol": ["https://developers.openai.com/api/docs/models/gpt-5.6-sol","https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5.6"],
+  "Qwen3.8-27B": ["https://huggingface.co/Qwen/Qwen3.8-27B"],
+  "Qwen3-8B": ["https://huggingface.co/Qwen/Qwen3-8B"],
+  "GPT-OSS-20B": ["https://huggingface.co/openai/gpt-oss-20b"],
+  "Llama-3.1-8B-Instruct": ["https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct"],
+  "Llama-Guard-3-8B": ["https://huggingface.co/meta-llama/Llama-Guard-3-8B"],
+  "Qwen3Guard-Gen-8B": ["https://huggingface.co/Qwen/Qwen3Guard-Gen-8B"],
+  "AgentDoG1.5-Qwen3.5-4B": ["https://huggingface.co/AI45Research/AgentDoG1.5-Qwen3.5-4B"]
+}
